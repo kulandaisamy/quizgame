@@ -1,0 +1,129 @@
+@media (min-width: 768px) {
+  .game-result {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bg-img-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/quiz-game-congrats-card-bg.png');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .won-cup-img {
+    height: 164px;
+    width: 164px;
+  }
+
+  .congrats-header {
+    font-size: 32px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 30px;
+  }
+
+  .percent-score {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0ea5e9;
+    margin-top: 10px;
+  }
+
+  .completed-game-para {
+    font-size: 24px;
+    font-weight: 500;
+    color: #334155;
+  }
+
+  .total-questions-para {
+    font-weight: 400;
+    font-size: 18px;
+    width: 362px;
+    text-align: center;
+  }
+  .lose-img {
+    width: 410px;
+    height: 307px;
+  }
+  .lose-text {
+    color: #334155;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .percent-calculation {
+    color: #0ea5e9;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .total-questions-para-lose {
+    width: 362px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .won-cup-img {
+    height: 164px;
+    width: 164px;
+  }
+  .bg-img-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/quiz-game-congrats-card-bg.png');
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .congrats-header {
+    font-size: 18px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 20px;
+  }
+  .percent-score {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0ea5e9;
+    margin-top: 10px;
+  }
+  .completed-game-para {
+    font-size: 16px;
+    font-weight: 500;
+    color: #334155;
+  }
+  .total-questions-para {
+    font-weight: 400;
+    font-size: 14px;
+    width: 278px;
+    height: 64px;
+    text-align: center;
+  }
+  .lose-img {
+    width: 189px;
+    height: 141.52px;
+  }
+  .lose-text {
+    color: #334155;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .percent-calculation {
+    color: #0ea5e9;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .total-questions-para-lose {
+    width: 274px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    height: 48px;
+  }
+}

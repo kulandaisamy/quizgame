@@ -1,0 +1,134 @@
+@media (min-width: 576px) {
+  .bg-container {
+    background-image: linear-gradient(
+      to left,
+      #b7b1d5,
+      #d8bfd0,
+      #f3dfd8,
+      #dbbcc4
+    );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .login-container {
+    background-color: #f8fafc;
+    height: 500px;
+    width: 1146px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .form-container {
+    height: 254px;
+    width: 411px;
+    display: flex;
+    flex-direction: column;
+    margin: 16px 8px 16px 8px;
+  }
+
+  .textbox-container {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+
+    outline: none;
+  }
+
+  .label-container {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: #333;
+  }
+
+  .checkbox-container {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    justify-content: flex-end;
+  }
+
+  .login-btn {
+    padding: 10px;
+    margin-top: 8px;
+    color: #ffffff;
+  }
+
+  .check-box {
+    margin-right: 8px;
+  }
+}
+@media (max-width: 575px) {
+  .bg-container {
+    background-image: linear-gradient(
+      to left,
+      #b7b1d5,
+      #d8bfd0,
+      #f3dfd8,
+      #dbbcc4
+    );
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 24px 16px 24px 16px;
+  }
+  .login-container {
+    background-color: #f8fafc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 8px 16px 8px;
+  }
+
+  .textbox-container {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+
+    outline: none;
+  }
+  .label-container {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: #333;
+  }
+  .checkbox-container {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    justify-content: flex-end;
+  }
+  .login-btn {
+    color: #ffffff;
+  }
+  .check-box {
+    margin-right: 8px;
+  }
+}
+
+.isError {
+  margin-top: 8px;
+  color: red;
+}
