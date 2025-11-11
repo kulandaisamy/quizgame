@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Redirect} from 'react-router-dom'
 import './index.css'
 
 class Login extends Component {
@@ -9,6 +9,7 @@ class Login extends Component {
     password: '',
     isShowPassword: false,
     isError: false,
+    errorMsg: '',
   }
 
   getUsername = e => {
@@ -43,29 +44,37 @@ class Login extends Component {
 
     if (response.ok) {
       const data = await response.json()
-      const jwtToken = data.jwt_token
-      Cookies.set('jwt_token', jwtToken, {expires: 30})
+      const jwtToken = data.jwt_token // eslint-disable-line camelcase
+      Cookies.set('jwt_token', jwtToken, {expires: 30}) // eslint-disable-line camelcase
       history.replace('/')
     } else {
       const data = await response.json()
       this.setState({
         isError: true,
+        errorMsg: data.error_msg,
       })
     }
   }
 
-  showPassword = e => {
+  showPassword = () => {
     this.setState(preState => ({
       isShowPassword: !preState.isShowPassword,
     }))
   }
 
   render() {
-    const {isError, isShowPassword} = this.state
+    const {isError, isShowPassword, errorMsg} = this.state
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <div className="bg-container">
         <div className="login-container">
-          <img src="https://res.cloudinary.com/dtylwiy9x/image/upload/v1762314578/Frame_8787_fpmqw0.png" />
+          <img
+            src="https://res.cloudinary.com/dtylwiy9x/image/upload/v1762314578/Frame_8787_fpmqw0.png"
+            alt="login website logo"
+          />
           <form className="form-container" onSubmit={this.submitUserDetails}>
             <label htmlFor="username" className="label-container">
               USERNAME
@@ -98,9 +107,7 @@ class Login extends Component {
               Login
             </button>
           </form>
-          {isError && (
-            <p className="isError">Please enter a valid Username & Password</p>
-          )}
+          {isError && <p className="isError">*{errorMsg}</p>}
         </div>
       </div>
     )

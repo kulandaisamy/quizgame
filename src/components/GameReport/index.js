@@ -137,7 +137,11 @@ class GameReport extends Component {
                                       key={each.id}
                                     >
                                       <div className="image-options btn-options">
-                                        <span>{each.text}</span>
+                                        <img
+                                          src={each.imageUrl}
+                                          alt={each.text}
+                                          className="btn-img-options"
+                                        />
                                       </div>
                                       <span className="icon-space-image">
                                         {each.isCorrect && (
@@ -198,6 +202,7 @@ class GameReport extends Component {
                               </li>
                             )
                           }
+                          return null
                         })}
                       </ul>
                     </div>

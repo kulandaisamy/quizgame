@@ -42,6 +42,7 @@ class GameResult extends Component {
                     <button
                       className="btn btn-primary"
                       onClick={this.showReport}
+                      type="button"
                     >
                       Report
                     </button>

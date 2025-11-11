@@ -18,11 +18,18 @@ class Header extends Component {
           className="logo-img"
           alt="login website logo"
         />
-        <button className="btn btn-outline-dark logOut" onClick={this.logOut}>
+        <button
+          type="button"
+          className="btn btn-outline-dark logOut"
+          onClick={this.logOut}
+        >
           Logout
         </button>
-        <button className="logout-btn" onClick={this.logOut}>
-          <img src="https://res.cloudinary.com/dtylwiy9x/image/upload/v1762341432/log-out-02_c1sw9r.png" />
+        <button type="button" className="logout-btn" onClick={this.logOut}>
+          <img
+            src="https://res.cloudinary.com/dtylwiy9x/image/upload/v1762341432/log-out-02_c1sw9r.png"
+            alt="logout icon"
+          />
         </button>
       </div>
     )

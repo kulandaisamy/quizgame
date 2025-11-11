@@ -5,6 +5,11 @@
     justify-content: space-between;
     align-items: center;
   }
+  .btn-img-options {
+    height: 50px;
+    width: 176px;
+    margin: 0px;
+  }
 
   .failure-img {
     height: 364.00048828125px;
@@ -233,6 +238,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding: 0px;
   }
 
   .correct-circle-img {
@@ -403,6 +409,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding: 0px;
+  }
+  .btn-img-options {
+    height: 50px;
+    width: 176px;
+    margin: 0px;
   }
   .normal-color {
     background-color: #cbd5e1;

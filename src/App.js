@@ -1,3 +1,4 @@
+import {Component} from 'react'
 import {Route, Switch, Redirect} from 'react-router-dom'
 import Login from './components/Login'
 import Home from './components/Home'
@@ -8,7 +9,6 @@ import GameReport from './components/GameReport'
 import NotFound from './components/NotFound'
 import ProtectedRoute from './components/ProtectedRoutes'
 import './App.css'
-import {Component} from 'react'
 
 // Replace your code here
 class App extends Component {
